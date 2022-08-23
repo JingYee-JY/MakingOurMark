@@ -10,6 +10,7 @@ const close = document.querySelector(".close");
 const againButton = document.querySelector(".againButton");
 
 let startGame = false;
+let faster = {step: 3}
 let player = {step: 0.5}
 let time;
 let right;
@@ -164,7 +165,8 @@ function moveObject(){
     let Sushi = document.querySelectorAll(".Sushi");
     let border = gameContainer.getBoundingClientRect();
     
-    let spwanTime = border.height / 10
+    let slow = border.height / 4
+    let spwanTime = border.height / 2
     AXE.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
             spawnObject();
@@ -172,8 +174,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     FengYou.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -182,8 +190,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     Boomerang.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -192,8 +206,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     BeeChengHiang.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -202,8 +222,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     Yeos.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -212,8 +238,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     Hanbok.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -222,8 +254,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     TWG.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -232,8 +270,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     BreadTalk.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -242,8 +286,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     Strawberry.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -252,8 +302,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     TigerBalm.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -262,8 +318,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     OldChangKee.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -272,8 +334,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
     Sushi.forEach(function(item){
         if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
@@ -282,8 +350,14 @@ function moveObject(){
         if(item.y > (border.height)){
             gameContainer.removeChild(item);
         }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        if(item.y < slow){
+            item.y = item.y + faster.step;
+            item.style.top = item.y +"px";
+        }
+        else{
+            item.y = item.y + player.step;
+            item.style.top = item.y +"px";
+        }
     })
 }
 
