@@ -144,7 +144,6 @@ function spawnObject(){
 
 function fallingObject(){
     if(startGame){
-        console.log("S");
         moveObject()
         window.requestAnimationFrame(fallingObject);
     }
@@ -167,8 +166,9 @@ function moveObject(){
     
     let slow = border.height / 4
     let spwanTime = border.height / 2
+
     AXE.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -182,9 +182,11 @@ function moveObject(){
             item.y = item.y + player.step;
             item.style.top = item.y +"px";
         }
+        console.log("s" + spwanTime)
+        console.log("d" + item.y)
     })
     FengYou.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -198,9 +200,11 @@ function moveObject(){
             item.y = item.y + player.step;
             item.style.top = item.y +"px";
         }
+        console.log("s" + spwanTime)
+        console.log("d" + item.y)
     })
     Boomerang.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -216,7 +220,7 @@ function moveObject(){
         }
     })
     BeeChengHiang.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -232,7 +236,7 @@ function moveObject(){
         }
     })
     Yeos.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -248,7 +252,7 @@ function moveObject(){
         }
     })
     Hanbok.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -264,7 +268,7 @@ function moveObject(){
         }
     })
     TWG.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -280,7 +284,7 @@ function moveObject(){
         }
     })
     BreadTalk.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -296,7 +300,7 @@ function moveObject(){
         }
     })
     Strawberry.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -312,7 +316,7 @@ function moveObject(){
         }
     })
     TigerBalm.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -328,7 +332,7 @@ function moveObject(){
         }
     })
     OldChangKee.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
@@ -344,7 +348,7 @@ function moveObject(){
         }
     })
     Sushi.forEach(function(item){
-        if(item.y > spwanTime && item.y < (spwanTime + 0.5)){
+                if(item.y == spwanTime){
             spawnObject();
         }
         if(item.y > (border.height)){
