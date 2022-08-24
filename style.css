@@ -33,7 +33,11 @@ body{
 }
 .top{
     z-index: 2;
-    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-top: 15px;
 }
 .left{
     position: absolute;
