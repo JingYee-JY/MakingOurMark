@@ -238,7 +238,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     TWG.forEach(function(item){
-                if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
