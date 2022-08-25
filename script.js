@@ -10,7 +10,6 @@ const close = document.querySelector(".close");
 const againButton = document.querySelector(".againButton");
 const gap = document.querySelector(".gap");
 
-let first = false;
 let startGame = false;
 let player = {step: 0.7}
 let time;
@@ -23,7 +22,6 @@ startButton.addEventListener("click", () => {
     start.classList.add("hide")
     game.classList.remove("hide")
     startGame = true
-    first = false;
     score = 0
     began()
 })
@@ -36,7 +34,7 @@ close.addEventListener("click", () => {
 })
 
 againButton.addEventListener("click", () => {
-    final.classList.add("hide")
+    start.classList.add("hide")
     game.classList.remove("hide")
     startGame = true
     score = 0
