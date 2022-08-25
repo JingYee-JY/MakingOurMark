@@ -53,7 +53,7 @@ function spawnObject(){
     object.classList.add(objects[index])
     object.y = 0;
     object.style.top = object.y + 'px';
-    object.style.left = Math.floor(Math.random() * (border.width - 150)) + 'px';
+    object.style.left = Math.floor(Math.random() * (border.width - 200)) + 'px';
     gameContainer.appendChild(object);
     if(objects[index] == "AXE"){
         object.addEventListener("click", () => {
