@@ -143,6 +143,7 @@ function spawnObject(){
             right = false;
             startGame = false;
             wrong.classList.remove("hide")
+            gap.setAttribute("style", "z-index: 100;")
     })
     }
 }
