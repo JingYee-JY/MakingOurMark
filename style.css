@@ -376,7 +376,7 @@ button.playAgain{
 
 /*desktop*/
 @media screen and (min-width:1200px){
-    .start, .game, .final{
+    .start, .game, .final, .game-container{
         max-width: 500px;
         margin: 0 auto;
     }
