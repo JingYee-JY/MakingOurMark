@@ -1,4 +1,392 @@
-body{
+
+/*mobile*/
+body {
+    font-family: 'noto';
+    margin: 0;
+    padding: 0;
+    background-color: #ECECEC;
+}
+
+*{
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.start{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.game{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-image: url("./img/background.png");
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-top: 15px;
+}
+
+.logo, .zone{
+    max-width: 150px;
+    padding-left: 15px
+}
+
+.game-title{
+    margin-top: auto;
+    
+}
+.title{
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: transparent;
+    border: 0px;
+    width:100%;
+    padding: 2.5% 5%;
+    cursor: pointer;
+}
+
+.cover-bottom{
+    margin-top: auto;
+}
+
+.cover-bottom img{
+    width: 100%;
+    height: auto;
+}
+
+.instruction{
+    background-color: white;
+    z-index: 100;
+}
+
+.gametop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-top: 15px;
+}
+
+.taskGiven{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.instruction p{
+    margin: 0;
+}
+
+.scoreCount{
+    padding: 15px;
+}
+.score{
+    margin-right: 2%;
+    background-image: url("./img/pointsBackground.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.game-container{
+    position: absolute;
+    width: 100vmin;
+    height: 100%;
+    z-index: 1;
+}
+
+.AXE{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_\ AXE\ Brand\ Oil.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.FengYou{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_Feng\ You.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.Boomerang{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/Others_\ Boomerang.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.BeeChengHiang{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_\ Bee\ Cheng\ Hiang.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.Yeos{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_\ Yeo’s.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.Hanbok{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/Others_\ Hanbok.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.TWG{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_\ TWG.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.BreadTalk{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_\ BreadTalk.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.Strawberry{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/Others_\ Strawberry.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.TigerBalm{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_\ Tiger\ Balm.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.OldChangKee{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/SG_\ Old\ Chang\ Kee.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.Sushi{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blink;
+    position: absolute;
+    display: flex;
+    background-image: url("./img/Others_\ Sushi.png");
+    background-size: contain;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.gap{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    gap: 5vh;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.pop{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close{
+    position: absolute;
+    margin-top: 25vh;
+}
+.wrong{
+    width: 60vh;
+}
+
+img.btn{
+    width: 100%;
+}
+
+button.submit, button.playAgain{
+    max-width: 75%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.startbtn{
+    max-width: 250px;
+}
+
+.final{
+    height: 100vh;
+    width: 100%;
+}
+.final .end{
+    display: flex;
+    margin: 0 auto;
+    max-width: 60%;
+    padding: 5% 5%;
+}
+button.playAgain{
+    margin-top: 30px;
+}
+
+.hide{
+    display: none;
+    visibility: hidden;
+}
+
+.game .logo, .final .logo{
+    max-width: 100px;
+}
+
+.game .zone, .final .zone {
+    max-width: 60px;
+}
+
+/*ipad*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .logo{
+        max-width: 250px;
+    }
+    .title{
+    padding: 5% 15%;
+    }
+    .question{
+        font-size: 32px;
+    }
+    button.playAgain{
+        max-width: 450px;
+    }
+    .final .end{
+        padding: 5% 5%;
+        max-width: 450px;
+    }
+}
+
+/*desktop*/
+@media screen and (min-width:1200px){
+    .start, .game, .final{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    button.playAgain{
+        max-width: 260px;
+    }
+    .startbtn{
+        max-width: 260px;
+    }
+    .final .end{
+        max-width: 326px;
+    }
+  }
+/*body{
     background-color: #F8E7D4;
     width: 100%;
     height: 100%;
@@ -304,4 +692,4 @@ p{
 }
 .end{
     width: 60%;
-}
+}*/
