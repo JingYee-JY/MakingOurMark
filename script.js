@@ -12,7 +12,7 @@ const gap = document.querySelector(".gap");
 
 let first = false;
 let startGame = false;
-let player = {step: 0.5}
+let player = {step: 0.7}
 let time;
 let right;
 let score;
@@ -171,10 +171,10 @@ function moveObject(){
     let Sushi = document.querySelectorAll(".Sushi");
     let border = gameContainer.getBoundingClientRect();
     
-    let spwanTime = border.height / 3
+    let spwanTime = border.height / 4
 
     AXE.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -186,7 +186,7 @@ function moveObject(){
         console.log("d" + item.y)
     })
     FengYou.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -198,7 +198,7 @@ function moveObject(){
         console.log("d" + item.y)
     })
     Boomerang.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -208,7 +208,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     BeeChengHiang.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -218,7 +218,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     Yeos.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -228,7 +228,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     Hanbok.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -238,7 +238,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     TWG.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -248,7 +248,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     BreadTalk.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -258,7 +258,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     Strawberry.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -268,7 +268,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     TigerBalm.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -278,7 +278,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     OldChangKee.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -288,7 +288,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     Sushi.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.7)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
