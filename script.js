@@ -10,6 +10,7 @@ const close = document.querySelector(".close");
 const againButton = document.querySelector(".againButton");
 const gap = document.querySelector(".gap");
 
+let first = false;
 let startGame = false;
 let player = {step: 0.5}
 let time;
@@ -22,6 +23,7 @@ startButton.addEventListener("click", () => {
     start.classList.add("hide")
     game.classList.remove("hide")
     startGame = true
+    first = false;
     score = 0
     began()
 })
@@ -169,7 +171,7 @@ function moveObject(){
     let Sushi = document.querySelectorAll(".Sushi");
     let border = gameContainer.getBoundingClientRect();
     
-    let spwanTime = border.height / 4
+    let spwanTime = border.height / 3
 
     AXE.forEach(function(item){
         if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
