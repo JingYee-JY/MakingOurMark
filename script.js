@@ -319,9 +319,9 @@ function began(){
 
 function updateScore(){
     if(startGame == true){
-        scoreCount.innerHTML = `${score}/3`;
+        scoreCount.innerHTML = `${score}/5`;
 
-        if(score == 3){
+        if(score == 5){
             startGame = false
             remove()
             game.classList.add("hide")
