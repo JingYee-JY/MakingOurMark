@@ -110,7 +110,7 @@ button{
 
 .game-container{
     position: absolute;
-    width: 100vmin;
+    width: 100%;
     height: 100%;
     z-index: 1;
 }
@@ -119,7 +119,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_\ AXE\ Brand\ Oil.png");
@@ -133,7 +132,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_Feng\ You.png");
@@ -147,7 +145,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/Others_\ Boomerang.png");
@@ -161,7 +158,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_\ Bee\ Cheng\ Hiang.png");
@@ -175,7 +171,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_\ Yeo’s.png");
@@ -189,7 +184,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/Others_\ Hanbok.png");
@@ -203,7 +197,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_\ TWG.png");
@@ -217,7 +210,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_\ BreadTalk.png");
@@ -231,7 +223,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/Others_\ Strawberry.png");
@@ -245,7 +236,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_\ Tiger\ Balm.png");
@@ -259,7 +249,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/SG_\ Old\ Chang\ Kee.png");
@@ -273,7 +262,6 @@ button{
     width: 20vh;
     height: 20vh;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px blink;
     position: absolute;
     display: flex;
     background-image: url("./img/Others_\ Sushi.png");

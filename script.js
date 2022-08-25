@@ -11,8 +11,6 @@ const againButton = document.querySelector(".againButton");
 const gap = document.querySelector(".gap");
 
 let startGame = false;
-let spawn;
-let faster = {step: 3}
 let player = {step: 0.5}
 let time;
 let right;
@@ -25,7 +23,6 @@ startButton.addEventListener("click", () => {
     game.classList.remove("hide")
     startGame = true
     score = 0
-    spawn = 1
     began()
 })
 
@@ -52,21 +49,7 @@ function spawnObject(){
     console.log(objects.length)
     console.log(border.width)
     object.classList.add(objects[index])
-    object.y = -100;
-    if(spawn == 1){
-        object.y = 50;
-        spawn = 2
-        spawnObject()
-    }
-    if(spawn == 2){
-        object.y = -50;
-        spawn = 3
-    }
-    if(spawn == 3){
-        object.y = -200;
-        spawn = 0
-        spawnObject()
-    }
+    object.y = 0;
     object.style.top = object.y + 'px';
     object.style.left = Math.floor(Math.random() * (border.width - 150)) + 'px';
     gameContainer.appendChild(object);
@@ -186,7 +169,7 @@ function moveObject(){
     let Sushi = document.querySelectorAll(".Sushi");
     let border = gameContainer.getBoundingClientRect();
     
-    let spwanTime = border.height / 2
+    let spwanTime = border.height / 4
 
     AXE.forEach(function(item){
         if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
@@ -197,6 +180,8 @@ function moveObject(){
         }
         item.y = item.y + player.step;
         item.style.top = item.y +"px";
+        console.log("s" + spwanTime)
+        console.log("d" + item.y)
     })
     FengYou.forEach(function(item){
         if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
@@ -207,9 +192,11 @@ function moveObject(){
         }
         item.y = item.y + player.step;
         item.style.top = item.y +"px";
+        console.log("s" + spwanTime)
+        console.log("d" + item.y)
     })
     Boomerang.forEach(function(item){
-                if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -219,7 +206,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     BeeChengHiang.forEach(function(item){
-                if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -229,7 +216,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     Yeos.forEach(function(item){
-                if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -269,7 +256,7 @@ function moveObject(){
         item.style.top = item.y +"px";
     })
     Strawberry.forEach(function(item){
-                if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
+        if(item.y >= spwanTime && item.y < (spwanTime + 0.5)){
             spawnObject();
         }
         if(item.y > (border.height + 200)){
@@ -319,9 +306,9 @@ function began(){
 
 function updateScore(){
     if(startGame == true){
-        scoreCount.innerHTML = `${score}/5`;
+        scoreCount.innerHTML = `${score}/3`;
 
-        if(score == 5){
+        if(score == 3){
             startGame = false
             remove()
             game.classList.add("hide")
