@@ -125,7 +125,6 @@ button{
     background-image: url("./img/SG_\ AXE\ Brand\ Oil.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -138,7 +137,6 @@ button{
     background-image: url("./img/SG_Feng\ You.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -151,7 +149,6 @@ button{
     background-image: url("./img/Others_\ Boomerang.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -164,7 +161,6 @@ button{
     background-image: url("./img/SG_\ Bee\ Cheng\ Hiang.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -177,7 +173,6 @@ button{
     background-image: url("./img/SG_\ Yeos.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -190,7 +185,6 @@ button{
     background-image: url("./img/Others_\ Hanbok.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -203,7 +197,6 @@ button{
     background-image: url("./img/SG_\ TWG.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -216,7 +209,6 @@ button{
     background-image: url("./img/SG_\ BreadTalk.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -229,7 +221,6 @@ button{
     background-image: url("./img/Others_\ Strawberry.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -242,7 +233,6 @@ button{
     background-image: url("./img/SG_\ Tiger\ Balm.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -255,7 +245,6 @@ button{
     background-image: url("./img/SG_\ Old\ Chang\ Kee.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
 
@@ -268,9 +257,37 @@ button{
     background-image: url("./img/Others_\ Sushi.png");
     background-size: contain;
     justify-content: center;
-    text-align: center;
     background-repeat: no-repeat;
 }
+
+.fadeOut{
+    animation: fade 2s;
+    -webkit-animation: fade 2s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fade {
+    from{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+    to{
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);}
+  }
+  @keyframes fade {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+  }
+
 
 .gap{
     position: relative;
