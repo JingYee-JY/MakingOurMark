@@ -3,6 +3,10 @@
 body {
     font-family: 'noto';
     margin: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
     padding: 0;
     background-color: #ECECEC;
 }
@@ -24,30 +28,37 @@ body {
     display: flex;
     flex-direction: column;
     height: auto;
-    background-image: url("./img/background.png");
 }
 
 .top{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 60px;
-    padding-top: 15px;
+    margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .logo, .zone{
     max-width: 150px;
-    padding-left: 15px
+    padding-left: 20px
 }
-
-.game-title, .preview{
-    margin-top: auto;
+.game-title{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.preview{
+    margin-top: 30px;
 }
 
 .title{
-    width: 100%;
-    padding: 5%;
-    box-sizing: border-box;
+    /* width: 100%;
+    height: auto;
+    padding: 0 15%;
+    box-sizing: border-box; */
+    display: flex;
+    margin: 0 auto;
+    max-width: 70%;
+    padding: 0;
 }
 .preview img{
     width: 100%;
@@ -114,6 +125,7 @@ button{
     width: 100%;
     height: 100%;
     z-index: 1;
+    background-image: url("./img/background.png");
 }
 
 .AXE{
@@ -261,8 +273,8 @@ button{
 }
 
 .fadeOut{
-    animation: fade 2s;
-    -webkit-animation: fade 2s;
+    animation: fade 0.5s;
+    -webkit-animation: fade 0.5s;
     opacity: 0;
 }
 
@@ -290,16 +302,9 @@ button{
 
 
 .gap{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    place-items: center;
-    gap: 5vh;
+    position: absolute;
     width: 100%;
-    height: 100vh;
-    top: 0;
+    height: 100%;
 }
 
 .pop{
@@ -307,16 +312,13 @@ button{
     height: 100%;
     width: 100%;
     display: flex;
+    background: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
 }
 
 .close{
-    position: absolute;
-    margin-top: 35%;
-}
-.wrong{
-    width: 85%;
+    width: 75%;
 }
 
 img.btn{
@@ -336,6 +338,8 @@ button.submit, button.playAgain{
 .final{
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .final .end{
     display: flex;
@@ -357,7 +361,7 @@ button.playAgain{
 }
 
 .game .zone, .final .zone {
-    max-width: 60px;
+    max-width: 120px;
 }
 
 /*ipad*/
@@ -382,17 +386,20 @@ button.playAgain{
 
 /*desktop*/
 @media screen and (min-width:1200px){
-    .start, .game, .final, .game-container{
-        max-width: 500px;
+    .start, .game, .final, .game-container,.gap{
+        max-width: 400px;
         margin: 0 auto;
     }
-    button.playAgain{
-        max-width: 260px;
-    }
     .startbtn{
-        max-width: 260px;
+        max-width: 200px;
     }
     .final .end{
-        max-width: 326px;
+        max-width: 250px;
+    }
+    .game-title{
+        margin-bottom: 10px;
+    }
+    .preview{
+        margin-top: 0;
     }
   }

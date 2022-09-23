@@ -53,97 +53,57 @@ function spawnObject(){
     object.style.top = object.y + 'px';
     object.style.left = Math.floor(Math.random() * (border.width - 200)) + 'px';
     gameContainer.appendChild(object);
-    if(objects[index] == "AXE"){
+    function addMark(){
         object.addEventListener("click", () => {
             object.classList.add("fadeOut")
                 right = true;
                 score = score + 1
         })
     }
-    if(objects[index] == "FengYou"){
+    function noMark(){
         object.addEventListener("click", () => {
-            object.classList.add("fadeOut")
-            right = true;
-            score = score + 1
+            object.classList.add("hide")
+            right = false;
+            startGame = false;
+            wrong.classList.remove("hide")
+            gap.setAttribute("style", "z-index: 100;")
     })
+    }
+    if(objects[index] == "AXE"){
+        addMark();
+    }
+    if(objects[index] == "FengYou"){
+        addMark();
     }
     if(objects[index] == "Boomerang"){
-        object.addEventListener("click", () => {
-            object.classList.add("hide")
-            right = false;
-            startGame = false;
-            wrong.classList.remove("hide")
-            gap.setAttribute("style", "z-index: 100;")
-    })
+        noMark();
     }
     if(objects[index] == "BeeChengHiang"){
-        object.addEventListener("click", () => {
-            object.classList.add("fadeOut")
-            right = true;
-            score = score + 1
-    })
+        addMark();
     }
     if(objects[index] == "Yeos"){
-        object.addEventListener("click", () => {
-            object.classList.add("fadeOut")
-            right = true;
-            score = score + 1
-    })
+        addMark();
     }
     if(objects[index] == "Hanbok"){
-        object.addEventListener("click", () => {
-            object.classList.add("hide")
-            right = false;
-            startGame = false;
-            wrong.classList.remove("hide")
-            gap.setAttribute("style", "z-index: 100;")
-    })
+        noMark();
     }
     if(objects[index] == "TWG"){
-        object.addEventListener("click", () => {
-            object.classList.add("fadeOut")
-            right = true;
-            score = score + 1
-    })
+        addMark();
     }
     if(objects[index] == "BreadTalk"){
-        object.addEventListener("click", () => {
-            object.classList.add("fadeOut")
-            right = true;
-            score = score + 1
-    })
+        addMark();
     }
     if(objects[index] == "Strawberry"){
-        object.addEventListener("click", () => {
-            object.classList.add("hide")
-            right = false;
-            startGame = false;
-            wrong.classList.remove("hide")
-            gap.setAttribute("style", "z-index: 100;")
-    })
+        noMark();
     }
     if(objects[index] == "TigerBalm"){
-        object.addEventListener("click", () => {
-            object.classList.add("fadeOut")
-            right = true;
-            score = score + 1
-    })
+        addMark();
     }
     if(objects[index] == "OldChangKee"){
-        object.addEventListener("click", () => {
-            object.classList.add("fadeOut")
-            right = true;
-            score = score + 1
-    })
+        addMark();
     }
     if(objects[index] == "Sushi"){
-        object.addEventListener("click", () => {
-            object.classList.add("hide")
-            right = false;
-            startGame = false;
-            wrong.classList.remove("hide")
-            gap.setAttribute("style", "z-index: 100;")
-    })
+        noMark();
     }
 }
 
@@ -171,7 +131,7 @@ function moveObject(){
     
     let spwanTime = border.height / 4
 
-    AXE.forEach(function(item){
+    function spawnItem(item){
         if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
             spawnObject();
         }
@@ -182,118 +142,42 @@ function moveObject(){
         item.style.top = item.y +"px";
         console.log("s" + spwanTime)
         console.log("d" + item.y)
+    }
+    AXE.forEach(function(item){
+        spawnItem(item);
     })
     FengYou.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
-        console.log("s" + spwanTime)
-        console.log("d" + item.y)
+        spawnItem(item);
     })
     Boomerang.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     BeeChengHiang.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     Yeos.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     Hanbok.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     TWG.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     BreadTalk.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     Strawberry.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     TigerBalm.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     OldChangKee.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
     Sushi.forEach(function(item){
-        if(item.y >= spwanTime && item.y < (spwanTime + 1.5)){
-            spawnObject();
-        }
-        if(item.y > (border.height + 200)){
-            gameContainer.removeChild(item);
-        }
-        item.y = item.y + player.step;
-        item.style.top = item.y +"px";
+        spawnItem(item);
     })
 }
 
@@ -315,7 +199,7 @@ function updateScore(){
                 remove()
                 game.classList.add("hide")
                 final.classList.remove("hide")
-              }, 2000);
+              }, 200);
         }
     }
 }
@@ -365,6 +249,9 @@ function remove(){
         gameContainer.removeChild(item);
     })
     Sushi.forEach(function(item){
+        gameContainer.removeChild(item);
+    })
+    BreadTalk.forEach(function(item){
         gameContainer.removeChild(item);
     })
 }
