@@ -26,6 +26,10 @@ startButton.addEventListener("click", () => {
     began()
 })
 
+window.addEventListener('dblclick', function(event) {
+    event.preventDefault();
+    }, { passive: false });
+
 close.addEventListener("click", () => {
     wrong.classList.add("hide")
     gap.setAttribute("style", "z-index: 0;")
